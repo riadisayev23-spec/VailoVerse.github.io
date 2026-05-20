@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VeloVerse</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <nav>
+        <h1>IMP<span>O</span>STER</h1>
+        <div>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Modes</a>
+            <a href="#">Contact</a>
+        </div>
+        <button>Join Now →</button>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-text">
+            <p>TRUST NO ONE. OUTSMART EVERYONE.</p>
+            <h2>ARE YOU THE <span>IMPOSTER?</span></h2>
+            <p class="desc">Step into the game. Blend in. Stay hidden. Or expose the imposter before it is too late.</p>
+            <!-- Fixed: This button now calls the scroll function -->
+            <button onclick="scrollToModes()">Play Now →</button>
+        </div>
+        <div class="hero-img">
+            <div class="red-shape"></div>
+            <div class="person">
+            <img src="vailoVerse/images/guy.jpg" alt="Guy in Hoodie">
+            </div>
+        </div>
+    </section>
+
+    <section class="modes" id="modes">
+        <h3>CHOOSE YOUR GAME MODE</h3>
+        <div class="cards">
+            <div class="card football">
+                <h4>FOOTBALL <span>IMPOSTER</span></h4>
+                <p>Outplay. Outthink. Do not get voted out.</p>
+                
+                <button onclick="playMode('football')">Play Now →</button>
+            </div>
+            <div class="card celebrity">
+                <h4>CELEBRITY <span>IMPOSTER</span></h4>
+                <p>Fame is your cover. Can you keep the act up?</p>
+                
+                <button onclick="playMode('celebrity')">Play Now →</button>
+            </div>
+            <div class="card locked">
+                <h4>🔒</h4>
+                <h4>COMING SOON</h4>
+                <p>Something new is on the way.</p>
+            </div>
+            <div class="card locked">
+                <h4>🔒</h4>
+                <h4>COMING SOON</h4>
+                <p>Something new is on the way.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <h2>IMP<span>O</span>STER</h2>
+        <p>© 2026 Imposter. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+

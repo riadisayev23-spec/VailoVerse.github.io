@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #080808;
+  color: white;
+}
+
+nav {
+  height: 80px;
+  padding: 0 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #0d0d0d;
+  border-bottom: 1px solid #222;
+}
+
+nav h1 span,
+footer span {
+  color: #e50914;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 14px;
+}
+
+button {
+  background: #e50914;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: white;
+  color: #e50914;
+}
+
+.hero {
+  min-height: 430px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px;
+  background: linear-gradient(120deg, #050505, #171717);
+}
+
+.hero-text {
+  width: 50%;
+}
+
+.hero-text h2 {
+  font-size: 64px;
+  margin: 20px 0;
+}
+
+.hero-text h2 span {
+  color: #e50914;
+  display: block;
+}
+
+.desc {
+  color: #bbb;
+  max-width: 440px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.hero-img {
+  width: 45%;
+  height: 350px;
+  position: relative;
+}
+
+.red-shape {
+  position: absolute;
+  right: 100px;
+  top: 20px;
+  width: 150px;
+  height: 320px;
+  background: #e50914;
+  transform: skewX(-25deg);
+}
+
+.person {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 400px;
+  height: 400px;
+  /* Use the link below */
+  background: url('guy.png') no-repeat center right;
+  background-size: contain;
+  z-index: 2; /* This keeps him in front of the red mark */
+}
+.modes {
+  padding: 50px 60px;
+}
+
+.modes h3 {
+  text-align: center;
+  letter-spacing: 8px;
+  margin-bottom: 40px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.card {
+  height: 330px;
+  padding: 30px;
+  background: #111;
+  border: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  border-color: #e50914;
+}
+
+.card h4 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.card h4 span {
+  color: #e50914;
+  display: block;
+}
+
+.card p {
+  color: #aaa;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.football {
+  background: linear-gradient(to top, #050505, transparent), url("https://images.unsplash.com/photo-1579952363873-27f3bade9f55") center/cover;
+}
+
+.celebrity {
+  background: linear-gradient(to top, #050505, transparent), url("https://images.unsplash.com/photo-1516280440614-37939bbacd81") center/cover;
+}
+
+.locked {
+  text-align: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #111, #222);
+  color: #777;
+}
+
+footer {
+  padding: 35px 60px;
+  background: #0d0d0d;
+  border-top: 1px solid #222;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero-text,
+  .hero-img {
+    width: 100%;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  nav div {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-text h2 {
+    font-size: 44px;
+  }
+}
+
