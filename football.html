@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Football Imposter | VailoVerse</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at top, rgba(0,255,120,0.25), transparent 35%),
+        linear-gradient(135deg, #050505, #101010, #001f12);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 520px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 25px;
+      padding: 35px;
+      box-shadow: 0 0 35px rgba(0,255,120,0.25);
+      backdrop-filter: blur(12px);
+    }
+
+    h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+      color: #00ff7b;
+      text-shadow: 0 0 15px #00ff7b;
+    }
+
+    h2 {
+      font-size: 30px;
+    }
+
+    p {
+      color: #ccc;
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+
+    input {
+      width: 100%;
+      padding: 16px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 14px;
+      font-size: 18px;
+      outline: none;
+      background: #111;
+      color: white;
+      border: 1px solid #333;
+    }
+
+    input:focus {
+      border-color: #00ff7b;
+      box-shadow: 0 0 10px rgba(0,255,120,0.5);
+    }
+
+    button {
+      width: 100%;
+      padding: 16px;
+      margin-top: 15px;
+      border: none;
+      border-radius: 15px;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      background: linear-gradient(135deg, #00ff7b, #00b85c);
+      color: black;
+      transition: 0.25s;
+    }
+
+    button:hover {
+      transform: scale(1.04);
+      box-shadow: 0 0 20px rgba(0,255,120,0.7);
+    }
+
+    .back-btn {
+      background: #222;
+      color: white;
+      border: 1px solid #555;
+    }
+
+    .back-btn:hover {
+      box-shadow: 0 0 15px rgba(255,255,255,0.25);
+    }
+
+    #wordText {
+      font-size: 46px;
+      margin: 25px 0;
+      color: #00ff7b;
+      text-shadow: 0 0 20px #00ff7b;
+    }
+
+    #timer {
+      font-size: 70px;
+      color: #00ff7b;
+      text-shadow: 0 0 25px #00ff7b;
+    }
+
+    #votes button {
+      background: #111;
+      color: white;
+      border: 1px solid #00ff7b;
+    }
+
+    .football-icon {
+      font-size: 60px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="football-icon">⚽</div>
+
+    <h1>Football Imposter</h1>
+    <p>Find the imposter before the timer ends.</p>
+
+    <div id="setup">
+      <input id="players" type="number" placeholder="Number of players">
+      <input id="minutes" type="number" placeholder="Minutes">
+
+      <button onclick="startGame('football')">Start Game</button>
+
+      <a href="index.html">
+        <button class="back-btn">⬅ Back to VailoVerse</button>
+      </a>
+    </div>
+
+    <div id="reveal" style="display:none;">
+      <h2 id="playerText"></h2>
+
+      <button id="showBtn" onclick="showWord()">Show Word</button>
+
+      <h1 id="wordText"></h1>
+
+      <button id="nextBtn" onclick="nextPlayer()" style="display:none;">
+        Next Player
+      </button>
+    </div>
+
+    <div id="timerBox" style="display:none;">
+      <h1 id="timer">00:00</h1>
+
+      <button onclick="startTimer()">Start Timer</button>
+    </div>
+
+    <div id="voteBox" style="display:none;">
+      <h2>Who is the imposter?</h2>
+      <div id="votes"></div>
+
+      <h2 id="result"></h2>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
