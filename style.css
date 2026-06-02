@@ -350,9 +350,7 @@ nav a.active {
     padding: 15px;
   }
 
-  nav div {
-    display: none;
-  }
+ 
 
   nav button {
     display: none;
@@ -390,5 +388,69 @@ nav a.active {
 
   h3 {
     font-size: 32px;
+  }
+}
+@media (max-width: 768px) {
+
+  nav {
+    position: relative;
+    height: auto;
+    padding: 20px;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  nav h1 {
+    font-size: 32px;
+  }
+
+  nav div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    width: 100%;
+    text-align: center;
+  }
+
+  nav a {
+    margin: 0;
+    font-size: 20px;
+    padding: 12px;
+  }
+
+  nav button {
+    width: 80%;
+    font-size: 18px;
+  }
+
+  section {
+    padding: 60px 6%;
+  }
+
+  .hero {
+    padding-top: 40px;
+    text-align: center;
+  }
+
+  .hero-text {
+    width: 100%;
+  }
+
+  .hero-text h2 {
+    font-size: 58px;
+    line-height: 1.2;
+    word-break: normal;
+  }
+
+  .hero-text p {
+    font-size: 22px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    width: 100%;
   }
 }
